@@ -7,11 +7,8 @@ const { PORT } = require('./config/config');
 const app = express();
 
 require('./config/mongoose');
-require('./config/express')(app);
 
 app.use(routes);
 app.use(errorHandler);
-
-// TO DO stuff
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}. Click to view http://localhost:${PORT}`));
