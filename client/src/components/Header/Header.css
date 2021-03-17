@@ -1,0 +1,47 @@
+.topInfo {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid lightgray;
+    border-width: 100%;
+    margin: 0 30px;
+    color: #6d6e71;
+}
+
+.topInfoLeft {
+    display: flex;
+    justify-self: start;
+}
+
+.topInfoRight {
+    display: flex;
+    text-align: right;
+    justify-self: end;
+}
+
+.bottomInfo {
+    display: flex;
+    align-items: center;
+    margin: 0 30px;
+    height: 115px;
+    border-bottom: 1px solid lightgray;
+    justify-content: space-between;
+}
+
+.logoDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.logoText {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logoText p {
+    margin: 2.5px;
+}
