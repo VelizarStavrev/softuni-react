@@ -1,11 +1,19 @@
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* TOP */
 .topInfo {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
     border-bottom: 1px solid lightgray;
-    border-width: 100%;
     margin: 0 30px;
     color: #6d6e71;
+    width: 1250px;
+    align-self: center;
 }
 
 .topInfoLeft {
@@ -19,13 +27,41 @@
     justify-self: end;
 }
 
+.topInfo .icon-top {
+    height: 22px;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.topInfo .iconHolder {
+    display: flex;
+    align-items: center;
+}
+
+.topInfo a {
+    text-decoration: none;
+    color: #6d6e71;
+}
+
+.topInfo p {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.topInfo a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+/* BOTTOM */
 .bottomInfo {
     display: flex;
     align-items: center;
     margin: 0 30px;
     height: 115px;
-    border-bottom: 1px solid lightgray;
     justify-content: space-between;
+    width: 1250px;
+    align-self: center;
 }
 
 .logoDiv {
@@ -44,4 +80,81 @@
 
 .logoText p {
     margin: 2.5px;
+}
+
+.bottomInfo form {
+    display: flex;
+    border: 1px solid lightgray;
+    border-radius: 2.5px;
+    max-width: 255px;
+    width: 100%;
+}
+
+.bottomInfo input {
+    border: none;
+    padding: 5px;
+    width: 100%;
+}
+
+.bottomInfo .icon-bottom {
+    height: 25px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.bottomInfo .iconHolder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.bottomInfo .iconHolder:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.bottomInfo a {
+    color: #000;
+    text-decoration: none;
+}
+
+.bottomInfo .userIcons {
+    display: flex;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7f7f7;
+    border: 1px solid #e7e7e7;
+    height: 58px;
+}
+
+nav .navLink {
+    text-decoration: none;
+    padding: 0 25px;
+    height: 100%;
+    color: #000;
+    font-weight: bold;
+    border-left: 1px solid #e7e7e7;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+nav .navLink:last-child {
+    border-right: 1px solid #e7e7e7;
+    color: #f61920;
+}
+
+nav .navLink:hover {
+    background-color: #000;
+    color: #f7f7f7;
 }
