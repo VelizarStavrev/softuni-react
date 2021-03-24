@@ -6,14 +6,18 @@ header {
 
 /* TOP */
 .topInfo {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     border-bottom: 1px solid #e7e7e7;
-    margin: 0 30px;
+    width: 100%;
     color: #6d6e71;
+    justify-content: center;
+}
+
+.topInfo .topInfoContainer {
     width: 1250px;
-    align-self: center;
+    display: flex;
+    margin: 0 30px;
+    justify-content: space-between;
 }
 
 .topInfoLeft {

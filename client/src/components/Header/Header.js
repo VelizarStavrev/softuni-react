@@ -16,28 +16,30 @@ const Header = () => {
     return (
         <header>
             <div className='topInfo'>
-                <div className='topInfoLeft'>
-                    <p>
-                        Оригинални маратонки и кецове
-                    </p>
-                    <a className='iconHolder' href='/opinions'>
-                        <img className='icon-top' src={opinions} alt='top info icon' />
-                        Мнения от клиенти
-                    </a>
-                </div>
+                <div className='topInfoContainer'>
+                    <div className='topInfoLeft'>
+                        <p>
+                            Оригинални маратонки и кецове
+                        </p>
+                        <a className='iconHolder' href='/opinions'>
+                            <img className='icon-top' src={opinions} alt='top info icon' />
+                            Мнения от клиенти
+                        </a>
+                    </div>
 
-                <div className='topInfoRight'>
-                    <div className='iconHolder'>
-                        <img className='icon-top' src={email} alt='top info icon' />
-                        contact@shopsector.com
-                    </div>
-                    <div className='iconHolder'>
-                        <img className='icon-top' src={skype} alt='top info icon' />
-                        shopsector.com
-                    </div>
-                    <div className='iconHolder'>
-                        <img className='icon-top' src={phone} alt='top info icon' />
-                        0895 12 16 16
+                    <div className='topInfoRight'>
+                        <div className='iconHolder'>
+                            <img className='icon-top' src={email} alt='top info icon' />
+                            contact@shopsector.com
+                        </div>
+                        <div className='iconHolder'>
+                            <img className='icon-top' src={skype} alt='top info icon' />
+                            shopsector.com
+                        </div>
+                        <div className='iconHolder'>
+                            <img className='icon-top' src={phone} alt='top info icon' />
+                            0895 12 16 16
+                        </div>
                     </div>
                 </div>
             </div>
