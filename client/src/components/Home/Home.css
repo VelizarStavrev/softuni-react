@@ -1,0 +1,96 @@
+.homeContainer {
+    width: 1250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeContainer p {
+    color: #6d6e71;
+}
+
+.homeContainer a {
+    color: #6d6e71;
+}
+
+.homeContainer a:hover {
+    color: #000;
+}
+
+.homeContainer img {
+    width: 100%;
+}
+
+/* Delivery div */
+.deliveryContainer {
+    display: flex;
+    border: 1px solid lightgray;
+    width: 100%;
+    justify-content: space-around;
+    margin: 20px 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.deliveryContainer .deliveryItem {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    color: #6d6e71;
+}
+
+.deliveryContainer img {
+    width: 35px;
+    padding-right: 5px;
+}
+
+.promotionsContainer {
+    display: flex;
+}
+
+.discountContainer {
+    position: relative;
+}
+
+.discountContainer form {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.deliverySubContainer {
+    margin-top: 10px;
+    border: 1px solid #6d6e71;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.discountContainer input {
+    border: none;
+    padding: 5px;
+    background-color: transparent;
+    color: #6d6e71;
+}
+
+.discountContainer button {
+    border: none;
+    padding: 5px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #6d6e71;
+    color: #fff;
+    font-weight: bold;
+}
+
+.discountContainer label {
+    color: #6d6e71;
+}

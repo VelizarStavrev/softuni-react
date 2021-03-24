@@ -4,7 +4,8 @@ import './App.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
-import Main from './components/Main/Main';
+// import Main from './components/Main/Main';
+import Home from './components/Home/Home';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       
       <Header />
 
-      <Main />
+      {/* <Main /> */}
+      <Home />
 
       <Footer />
 
