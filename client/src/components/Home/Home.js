@@ -9,11 +9,13 @@ import check from './assets/icons/check-gray.svg';
 import delivery from './assets/icons/delivery-gray.svg';
 import returnProduct from './assets/icons/return-gray.svg';
 
+import NewOffers from '../NewOffers/NewOffers';
+
 const Home = () => {
     return (
         <main>
             <div className='homeContainer'>
-                <p>Онлайн магазин за оригинални маратонки ShopSector.com! Купи сега <a href='url'>мъжки маратонки</a>, <a href='url'>дамски маратонки</a> и <a href='url'>детски маратонки</a> с големи намаления.</p>
+                <p className='homeSmallText'>Онлайн магазин за оригинални маратонки ShopSector.com! Купи сега <a href='url'>мъжки маратонки</a>, <a href='url'>дамски маратонки</a> и <a href='url'>детски маратонки</a> с големи намаления.</p>
                 <a href='url'><img src={campaign} alt='campaign' /></a>
                 <div className='deliveryContainer'>
                     <div className='deliveryItem'>
@@ -44,11 +46,15 @@ const Home = () => {
                                 <input type='text' name='subscribe' placeholder='Остави имейл' />
                                 <button type='submit'>ИЗПРАТИ</button>
                             </div>
-                            <label for="subscribe">* На посочения имейл ще изпратим промо код </label>
+                            <label htmlFor="subscribe">* На посочения имейл ще изпратим промо код </label>
                         </form>
                     </div>
                     <a href='url'><img src={vip} alt='campaign' /></a>
                 </div>
+                <NewOffers />
+                <NewOffers />
+                <NewOffers />
+                <NewOffers />
             </div>
         </main>
     );

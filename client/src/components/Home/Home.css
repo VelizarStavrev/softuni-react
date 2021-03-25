@@ -4,17 +4,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
 
-.homeContainer p {
+.homeSmallText {
     color: #6d6e71;
 }
 
-.homeContainer a {
+.homeSmallText a {
     color: #6d6e71;
 }
 
-.homeContainer a:hover {
+.homeSmallText a:hover {
     color: #000;
 }
 
@@ -47,6 +48,7 @@
 
 .promotionsContainer {
     display: flex;
+    margin-bottom: 20px;
 }
 
 .discountContainer {
