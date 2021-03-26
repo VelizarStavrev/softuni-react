@@ -8,10 +8,10 @@ import productFour from './assets/images/product-4.jpg';
 import arrowLeft from './assets/icons/arrow-black_left.svg';
 import arrowRight from './assets/icons/arrow-black_right.svg';
 
-const NewOffers = () => {
+const NewOffers = (props) => {
     return (
         <div className='newOffersContainer'>
-            <h2>НОВИ ПРЕДЛОЖЕНИЯ</h2>
+            <h2>{props.name}</h2>
             <div className='productContainer'>
                 <a className='productCard' href='url'>
                     <img src={productOne} alt='campaign' />
