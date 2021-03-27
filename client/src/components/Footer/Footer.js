@@ -1,5 +1,7 @@
 import './Footer.css';
 
+import { Link } from 'react-router-dom';
+
 import facebook from './assets/icons/socials/facebook-black.svg';
 import pinterest from './assets/icons/socials/pinterest-black.svg';
 import twitter from './assets/icons/socials/twitter-black.svg';
@@ -15,33 +17,33 @@ const Footer = () => {
                     <div className='footerTopInfoColumn'>
                         <h3>Категории</h3>
                         <div>
-                            <a href='/male'>Мъжки</a>
-                            <a href='/female'>Дамски</a>
-                            <a href='/kid'>Детски</a>
-                            <a href='/sale'>Разпродажба</a>
+                            <Link to='/url'>Мъжки</Link>
+                            <Link to='/url'>Дамски</Link>
+                            <Link to='/url'>Детски</Link>
+                            <Link to='/url'>Разпродажба</Link>
                         </div>
                     </div>
 
                     <div className='footerTopInfoColumn'>
                         <h3>Клиентски услуги</h3>
                         <div>
-                            <a href='/about'>За нас</a>
-                            <a href='/contacts'>Контакти</a>
-                            <a href='/delivery'>Доставка и плащане</a>
-                            <a href='/size-selection'>Как да изберете правилния размер</a>
-                            <a href='/tips'>Съвети за поддръжка на Вашите маратонки</a>
-                            <a href='/return'>Замяна или връщане</a>
+                            <Link to='/url'>За нас</Link>
+                            <Link to='/url'>Контакти</Link>
+                            <Link to='/url'>Доставка и плащане</Link>
+                            <Link to='/url'>Как да изберете правилния размер</Link>
+                            <Link to='/url'>Съвети за поддръжка на Вашите маратонки</Link>
+                            <Link to='/url'>Замяна или връщане</Link>
                         </div>
                     </div>
 
                     <div className='footerTopInfoColumn'>
                         <h3> </h3>
                         <div>
-                            <a href='/blog'>Блог</a>
-                            <a href='/loyal-client'>Стани наш лоялен клиент</a>
-                            <a href='/faq'>Често задавани въпроси</a>
-                            <a href='/user-agreement'>Условия за ползване</a>
-                            <a href='/cookies'>Политика за поверителност и бисквитки</a>
+                            <Link to='/url'>Блог</Link>
+                            <Link to='/url'>Стани наш лоялен клиент</Link>
+                            <Link to='/url'>Често задавани въпроси</Link>
+                            <Link to='/url'>Условия за ползване</Link>
+                            <Link to='/url'>Политика за поверителност и бисквитки</Link>
                         </div>
                     </div>
 
@@ -58,11 +60,11 @@ const Footer = () => {
                         </div>
                         <h3>Последвайте ни</h3>
                         <div className='socialMediaContainer'>
-                            <a href='/facebook'><img className='icon-social' src={facebook} alt='social media icon' /></a>
-                            <a href='/pinterest'><img className='icon-social' src={pinterest} alt='social media icon' /></a>
-                            <a href='/twitter'><img className='icon-social' src={twitter} alt='social media icon' /></a>
-                            <a href='/google'><img className='icon-social' src={google} alt='social media icon' /></a>
-                            <a href='/instagram'><img className='icon-social' src={instagram} alt='social media icon' /></a>
+                            <Link to={{ pathname: 'https://www.facebook.com/ShopSector/' }}><img className='icon-social' src={facebook} alt='social media icon' /></Link>
+                            <Link to={{ pathname: 'https://www.pinterest.com/shopsector/' }}><img className='icon-social' src={pinterest} alt='social media icon' /></Link>
+                            <Link to={{ pathname: 'https://twitter.com/ShopSector' }}><img className='icon-social' src={twitter} alt='social media icon' /></Link>
+                            <Link to={{ pathname: 'https://www.instagram.com/shopsector.com_official/' }}><img className='icon-social' src={google} alt='social media icon' /></Link>
+                            <Link to={{ pathname: 'https://plus.google.com/+Shopsector' }}><img className='icon-social' src={instagram} alt='social media icon' /></Link>
                         </div>
                     </div>
                 </div>
@@ -73,9 +75,9 @@ const Footer = () => {
                     </div>
 
                     <div className='footerBottomRight'>
-                        <a href='velizarstavrev.dev' target='_blank'>
+                        <Link to={{ pathname: 'https://www.velizarstavrev.dev' }} target='_blank' rel='noopener noreferrer'>
                             Онлайн магазин от Velizar Stavrev.
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

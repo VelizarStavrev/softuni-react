@@ -162,3 +162,8 @@ nav .navLink:hover {
     background-color: #000;
     color: #f7f7f7;
 }
+
+nav .navLinkActive {
+    background-color: #000;
+    color: #f7f7f7;
+}

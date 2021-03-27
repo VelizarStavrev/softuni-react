@@ -1,4 +1,7 @@
 import './Header.css';
+
+import { Link, NavLink } from 'react-router-dom';
+
 import logo from './assets/logo.svg';
 
 import opinions from './assets/icons/top-info/star-gray_empty.svg';
@@ -10,7 +13,6 @@ import search from './assets/icons/user/search-black.svg';
 import profile from './assets/icons/user/user-black.svg';
 import favorites from './assets/icons/user/star-black_empty.svg';
 import cart from './assets/icons/user/cart-black.svg';
-
 
 const Header = () => {
     return (
@@ -60,30 +62,30 @@ const Header = () => {
                 </form> 
 
                 <div className='userIcons'>
-                    <a className='iconHolder' href='/profile'>
+                    <Link to='/url' className='iconHolder'>
                         <img className='icon-bottom' src={profile} alt='top info icon' />
                         ВХОД
-                    </a>
-                    <a className='iconHolder' href='/favorites'>
+                    </Link>
+                    <Link to='/url' className='iconHolder'>
                         <img className='icon-bottom' src={favorites} alt='top info icon' />
                         ЛЮБИМИ
-                    </a>
-                    <a className='iconHolder' href='/cart'>
+                    </Link>
+                    <Link to='/url' className='iconHolder'>
                         <img className='icon-bottom' src={cart} alt='top info icon' />
                         КОЛИЧКА
-                    </a>
-                    <a className='iconHolder' href='/cart'>
+                    </Link>
+                    <Link to='/url' className='iconHolder'>
                         0 бр. / 0.00 лв
-                    </a>
+                    </Link>
                 </div>
             </div>
 
             <nav>
-                <a className='navLink' href='/home'>НАЧАЛО</a>
-                <a className='navLink' href='/male'>МЪЖКИ</a>
-                <a className='navLink' href='/female'>ДАМСКИ</a>
-                <a className='navLink' href='/kid'>ДЕТСКИ</a>
-                <a className='navLink navLinkSale' href='/sale'>РАЗПРОДАЖБА</a>
+                <NavLink to='/' className='navLink'>НАЧАЛО</NavLink>
+                <NavLink to='/url' className='navLink' activeClassName='navLinkActive'>МЪЖКИ</NavLink>
+                <NavLink to='/url' className='navLink'>ДАМСКИ</NavLink>
+                <NavLink to='/url' className='navLink'>ДЕТСКИ</NavLink>
+                <NavLink to='/url' className='navLink navLinkSale'>РАЗПРОДАЖБА</NavLink>
             </nav>
         </header>
     );

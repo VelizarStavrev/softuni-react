@@ -3,7 +3,7 @@ import './Main.css';
 const Main = () => {
     return (
         <main>
-            MAIN
+            MAIN - URL NOT READY YET!
         </main>
     );
 };

@@ -1,5 +1,7 @@
 import './Home.css';
 
+import { Link } from 'react-router-dom';
+
 import campaign from './assets/images/campaign.jpg';
 import discount from './assets/images/discount.jpg';
 import vip from './assets/images/vip.jpg';
@@ -16,8 +18,8 @@ const Home = () => {
     return (
         <main>
             <div className='homeContainer'>
-                <p className='homeSmallText'>Онлайн магазин за оригинални маратонки ShopSector.com! Купи сега <a href='url'>мъжки маратонки</a>, <a href='url'>дамски маратонки</a> и <a href='url'>детски маратонки</a> с големи намаления.</p>
-                <a href='url'><img src={campaign} alt='campaign' /></a>
+                <p className='homeSmallText'>Онлайн магазин за оригинални маратонки ShopSector.com! Купи сега <Link to='/url'>мъжки маратонки</Link>, <Link to='/url'>дамски маратонки</Link> и <Link to='/url'>детски маратонки</Link> с големи намаления.</p>
+                <Link to='/url'><img src={campaign} alt='campaign' /></Link>
                 <div className='deliveryContainer'>
                     <div className='deliveryItem'>
                         <img src={view} alt='delivery info icon' />
@@ -57,7 +59,6 @@ const Home = () => {
                 <NewOffers name='Препоръчани продукти' />
                 <NewOffers name='Най-намалени' />
                 <Brands />
-
 
                 <div className='homeFinalDesc'>
                     <p className='homeSmallText'>ShopSector.com е онлайн магазин за оригинални маратонки и други спортни обувки на най-популярните световни марки - Puma. Adidas, Reebok, Asics, Nike и др.</p>

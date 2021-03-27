@@ -1,5 +1,7 @@
 import './NewOffers.css';
 
+import { Link } from 'react-router-dom';
+
 import productOne from './assets/images/product-1.jpg';
 import productTwo from './assets/images/product-2.jpg';
 import productThree from './assets/images/product-3.jpg';
@@ -13,7 +15,7 @@ const NewOffers = (props) => {
         <div className='newOffersContainer'>
             <h2>{props.name}</h2>
             <div className='productContainer'>
-                <a className='productCard' href='url'>
+                <Link to='/url' className='productCard'>
                     <img src={productOne} alt='campaign' />
                     <div className='productInfo'>
                         <h3>Adidas Adilette Shower</h3>
@@ -28,8 +30,8 @@ const NewOffers = (props) => {
                     <span className='productSale'>
                         -21%
                     </span>
-                </a>
-                <a className='productCard' href='url'>
+                </Link>
+                <Link to='/url' className='productCard'>
                     <img src={productTwo} alt='campaign' />
                     <div className='productInfo'>
                         <h3>Adidas Adilette Shower</h3>
@@ -44,8 +46,8 @@ const NewOffers = (props) => {
                     <span className='productSale'>
                         -25%
                     </span>
-                </a>
-                <a className='productCard' href='url'>
+                </Link>
+                <Link to='/url' className='productCard'>
                     <img src={productThree} alt='campaign' />
                     <div className='productInfo'>
                         <h3>Adidas Adilette Shower</h3>
@@ -60,8 +62,8 @@ const NewOffers = (props) => {
                     <span className='productSale'>
                         -37%
                     </span>
-                </a>
-                <a className='productCard' href='url'>
+                </Link>
+                <Link to='/url' className='productCard'>
                     <img src={productFour} alt='campaign' />
                     <div className='productInfo'>
                         <h3>Adidas Adilette Shower</h3>
@@ -76,7 +78,7 @@ const NewOffers = (props) => {
                     <span className='productSale'>
                         -54%
                     </span>
-                </a>
+                </Link>
                 
                 <div className='productArrowContainer productArrowLeft'>
                     <div className='productArrow'>
