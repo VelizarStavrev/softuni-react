@@ -13,6 +13,8 @@ import returnProduct from './assets/icons/return-gray.svg';
 
 import NewOffers from '../NewOffers/NewOffers';
 import Brands from '../Brands/Brands';
+import TestimonialsShowcase from '../TestimonialsShowcase/TestimonialsShowcase';
+import LastNews from '../LastNews/LastNews';
 
 const Home = () => {
     return (
@@ -59,7 +61,8 @@ const Home = () => {
                 <NewOffers name='Препоръчани продукти' />
                 <NewOffers name='Най-намалени' />
                 <Brands />
-
+                <TestimonialsShowcase />
+                <LastNews />
                 <div className='homeFinalDesc'>
                     <p className='homeSmallText'>ShopSector.com е онлайн магазин за оригинални маратонки и други спортни обувки на най-популярните световни марки - Puma. Adidas, Reebok, Asics, Nike и др.</p>
                     <p className='homeSmallText'>При нас ще откриете огромно разнообразие от мъжки, дамски и детски оригинални маратонки за спорт и ежедневни нужди. Обогатяваме асортимента си непрестанно, така че независимо дали търсите иновативни модели или по-традиционни, имаме от всичко - от леки и здрави модели за бягане, през удобни и практични маратонки за разходка, до най-екстравагантните спортни изкушения за вашите ходила.</p>

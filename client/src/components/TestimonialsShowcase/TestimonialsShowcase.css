@@ -1,0 +1,103 @@
+.testimonialsContainer {
+    width: 100%;
+    padding: 0 40px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.testimonialsContainer h2 {
+    color: #000;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.testimonialsContainer {
+    display: flex;
+    position: relative;
+}
+
+.testimonialsArrowContainer {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.testimonialsArrowLeft {
+    left: -40px;
+}
+
+.testimonialsArrowRight {
+    right: -40px;
+}
+
+.testimonialsArrow {
+    width: 20px;
+    background-color: #6d6e71;
+    border-radius: 5px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.testimonialsArrow:hover {
+    background-color: #000;
+}
+
+.testimonialsCard {
+    border: 1px solid lightgray;
+    border-radius: 2.5px;
+    text-decoration: none;
+    color: #6d6e71;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonialsInfo {
+    margin-top: 20px;
+    padding: 0 10px 10px 10px;
+}
+
+.testimonialsInfo h3 {
+    color: #000;
+    margin-top: 0;
+}
+
+.testimonialsInfo .starReview {
+    width: 15px;
+    margin-right: 5px;
+}
+
+.testimonialsCard .testimonialsBigLink {
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    width: 150px;
+}
+
+.testimonialsCard .testimonialsSmallLink {
+    text-decoration: none;
+    color: #6d6e71;
+    font-weight: bold;
+    text-decoration: underline;
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.testimonialsCard .testimonialsSmallLink:hover {
+    color: #000;
+}
