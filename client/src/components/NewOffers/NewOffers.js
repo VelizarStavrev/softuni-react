@@ -1,6 +1,6 @@
 import './NewOffers.css';
 
-import { Link } from 'react-router-dom';
+import ProductCard from '../ProductCard/ProductCard';
 
 import productOne from './assets/images/product-1.jpg';
 import productTwo from './assets/images/product-2.jpg';
@@ -15,71 +15,46 @@ const NewOffers = (props) => {
         <div className='newOffersContainer'>
             <h2>{props.name}</h2>
             <div className='productContainer'>
-                <Link to='/url' className='productCard'>
-                    <img src={productOne} alt='campaign' />
-                    <div className='productInfo'>
-                        <h3>Adidas Adilette Shower</h3>
-                        <p>Дамски джапанки</p>
-                        <p className='productPrice'>
-                            <span>49.99 лв.</span>
-                            <span>39.99 лв.</span>
-                            </p>
-                        <p>Арт. №: FZ2853</p>
-                        <p>Налични размери: 37 / 38 / 39 / 40.5 / 42</p>
-                    </div>
-                    <span className='productSale'>
-                        -21%
-                    </span>
-                </Link>
-                <Link to='/url' className='productCard'>
-                    <img src={productTwo} alt='campaign' />
-                    <div className='productInfo'>
-                        <h3>Adidas Adilette Shower</h3>
-                        <p>Дамски джапанки</p>
-                        <p className='productPrice'>
-                            <span>49.99 лв.</span>
-                            <span>39.99 лв.</span>
-                            </p>
-                        <p>Арт. №: FZ2853</p>
-                        <p>Налични размери: 37 / 38 / 39 / 40.5 / 42</p>
-                    </div>
-                    <span className='productSale'>
-                        -25%
-                    </span>
-                </Link>
-                <Link to='/url' className='productCard'>
-                    <img src={productThree} alt='campaign' />
-                    <div className='productInfo'>
-                        <h3>Adidas Adilette Shower</h3>
-                        <p>Дамски джапанки</p>
-                        <p className='productPrice'>
-                            <span>49.99 лв.</span>
-                            <span>39.99 лв.</span>
-                            </p>
-                        <p>Арт. №: FZ2853</p>
-                        <p>Налични размери: 37 / 38 / 39 / 40.5 / 42</p>
-                    </div>
-                    <span className='productSale'>
-                        -37%
-                    </span>
-                </Link>
-                <Link to='/url' className='productCard'>
-                    <img src={productFour} alt='campaign' />
-                    <div className='productInfo'>
-                        <h3>Adidas Adilette Shower</h3>
-                        <p>Дамски джапанки</p>
-                        <p className='productPrice'>
-                            <span>49.99 лв.</span>
-                            <span>39.99 лв.</span>
-                            </p>
-                        <p>Арт. №: FZ2853</p>
-                        <p>Налични размери: 37 / 38 / 39 / 40.5 / 42</p>
-                    </div>
-                    <span className='productSale'>
-                        -54%
-                    </span>
-                </Link>
-                
+                <ProductCard
+                    productId={'1'}
+                    image={productOne} 
+                    name='Adidas Adilette Shower'
+                    type='Дамски джапанки'
+                    price='49.99'
+                    priceDiscount='20'
+                    productNumber='FZ2853'
+                    productSizes='37 / 38 / 39 / 40.5 / 42 / 59 / 123'
+                />
+                <ProductCard
+                    productId={'2'}
+                    image={productTwo} 
+                    name='Adidas Adilette Shower'
+                    type='Дамски джапанки'
+                    price='49.99'
+                    priceDiscount='20'
+                    productNumber='FZ2853'
+                    productSizes='37 / 38 / 39 / 40.5 / 42 / 59 / 123'
+                />
+                <ProductCard
+                    productId={'3'}
+                    image={productThree} 
+                    name='Adidas Adilette Shower'
+                    type='Дамски джапанки'
+                    price='49.99'
+                    priceDiscount='20'
+                    productNumber='FZ2853'
+                    productSizes='37 / 38 / 39 / 40.5 / 42 / 59 / 123'
+                />
+                <ProductCard
+                    productId={'4'}
+                    image={productFour} 
+                    name='Adidas Adilette Shower'
+                    type='Дамски джапанки'
+                    price='49.99'
+                    priceDiscount='20'
+                    productNumber='FZ2853'
+                    productSizes='37 / 38 / 39 / 40.5 / 42 / 59 / 123'
+                />
                 <div className='productArrowContainer productArrowLeft'>
                     <div className='productArrow'>
                         <img src={arrowLeft} alt='arrow left' />

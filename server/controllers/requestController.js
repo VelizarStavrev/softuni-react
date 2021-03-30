@@ -10,7 +10,12 @@ router.get('/', (req, res) => {
 
 // Test
 router.get('/test', (req, res) => {
-    res.send('Test');
+    const test = {
+        test: 'Test',
+        test2: 'Test2',
+    }
+
+    res.send(test);
     console.log('Request received');
 });
 

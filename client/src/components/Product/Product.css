@@ -1,0 +1,134 @@
+.productPageContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+/* Product delivery div */
+.productPageDeliveryContainer {
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.productPageDeliveryContainer .productPageItem {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    color: #6d6e71;
+}
+
+.productPageDeliveryContainer img {
+    width: 25px;
+    padding-right: 5px;
+    padding-left: 20px;
+}
+
+/*  */
+/* TOP CONTAINER */
+.productPageContainerTop {
+    width: 1250px;
+    display: flex;
+}
+
+/* IMAGE */
+.productPageImageContainer {
+    width: 550px;
+}
+
+.productPageImageContainer img {
+    width: 550px;
+}
+
+.productImageNavContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.productImageNavContainer img {
+    width: 70px;
+    box-sizing: border-box;
+    opacity: 0.75;
+}
+
+.productImageNavContainer img:hover {
+    border: 1px solid lightgray;
+    border-radius: 2.5px;
+    opacity: 1;
+}
+
+/* INFO */
+.productPageInfoContainer {
+    margin: 0 40px;
+    width: 280px;
+    margin-top: 40px;
+}
+
+/* ORDER */
+.productPageOrderContainer {
+    margin-top: 40px;
+}
+
+.productPageInfoContainer .starReview {
+    width: 15px;
+    margin-right: 5px;
+}
+
+.productPageInfoContainer select {
+    padding: 15px;
+}
+
+.productPageInfoContainer button {
+    margin-top: 15px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.productPageDeliverySmallContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding-top: 10px;
+}
+
+.productPageDeliverySmallContainer img {
+    width: 25px;
+    margin-right: 10px;
+}
+
+.productPageDeliverySmallContainer .productPageItem {
+    display: flex;
+    align-items: center;
+    color: #6d6e71;
+    margin-bottom: 10px;
+}
+
+.productShareLinks {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.productShareLinks a {
+    margin: 0 5px;
+}
+
+.productShareLinks a img {
+    width: 17.5px;
+}
+
+/*  */
+/* BOTTOM CONTAINER */
+.productPageContainerBottom {
+    margin-top: 20px;
+}

@@ -82,7 +82,7 @@ const Header = () => {
 
             <nav>
                 <NavLink to='/' className='navLink'>НАЧАЛО</NavLink>
-                <NavLink to='/url' className='navLink' activeClassName='navLinkActive'>МЪЖКИ</NavLink>
+                <NavLink to='/products' className='navLink' activeClassName='navLinkActive'>МЪЖКИ</NavLink>
                 <NavLink to='/url' className='navLink'>ДАМСКИ</NavLink>
                 <NavLink to='/url' className='navLink'>ДЕТСКИ</NavLink>
                 <NavLink to='/url' className='navLink navLinkSale'>РАЗПРОДАЖБА</NavLink>
