@@ -1,5 +1,6 @@
 const express = require('express');
 
+const serverHeaders = require('./middlewares/serverHeaders');
 const routes = require('./routes');
 const errorHandler = require('./middlewares/errorHandler');
 const { PORT } = require('./config/config');
@@ -8,7 +9,10 @@ const app = express();
 
 require('./config/mongoose');
 
+app.use(serverHeaders);
+
 app.use(routes);
+
 app.use(errorHandler);
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}. Click to view http://localhost:${PORT}`));
