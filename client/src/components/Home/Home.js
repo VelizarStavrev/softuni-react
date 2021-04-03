@@ -56,10 +56,10 @@ const Home = () => {
                     </div>
                     <a href='url'><img src={vip} alt='campaign' /></a>
                 </div>
-                <NewOffers name='Нови предложения' />
-                <NewOffers name='Най-продавани' />
-                <NewOffers name='Препоръчани продукти' />
-                <NewOffers name='Най-намалени' />
+                <NewOffers name='Мъжки обувки' type='male' />
+                <NewOffers name='Дамски обувки' type='female' />
+                <NewOffers name='Детски обувки' type='kid' />
+                <NewOffers name='Разпродажба' type='male' />
                 <Brands />
                 <TestimonialsShowcase />
                 <LastNews />
