@@ -23,7 +23,7 @@ const getOne = (id) => {
         });
 }
 
-const getOneType = (type) => {
+const getOneType = (type, limit) => {
     let word;
 
     switch (type) {
@@ -42,7 +42,7 @@ const getOneType = (type) => {
 
     return Product
         .find({ type: { "$regex": word, "$options": "i" } })
-        // .find({ type: 'Мъжки кецове' })
+        .limit(limit*1)
         .lean()
         .then((products) => {
             return products;

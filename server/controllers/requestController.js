@@ -89,8 +89,8 @@ router.get('/getOne/:productId', (req, res) => {
         });
 });
 
-router.get('/getOneType/:productType', (req, res) => {
-    productService.getOneType(req.params.productType)
+router.get('/getOneType/:productType/:productLimit', (req, res) => {
+    productService.getOneType(req.params.productType, req.params.productLimit)
         .then(product => {
             // console.log(product);
             res.send(product);
