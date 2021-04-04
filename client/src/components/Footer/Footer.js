@@ -60,18 +60,18 @@ const Footer = () => {
                         </div>
                         <h3>Последвайте ни</h3>
                         <div className='socialMediaContainer'>
-                            <Link to={{ pathname: 'https://www.facebook.com/ShopSector/' }}><img className='icon-social' src={facebook} alt='social media icon' /></Link>
-                            <Link to={{ pathname: 'https://www.pinterest.com/shopsector/' }}><img className='icon-social' src={pinterest} alt='social media icon' /></Link>
-                            <Link to={{ pathname: 'https://twitter.com/ShopSector' }}><img className='icon-social' src={twitter} alt='social media icon' /></Link>
-                            <Link to={{ pathname: 'https://www.instagram.com/shopsector.com_official/' }}><img className='icon-social' src={google} alt='social media icon' /></Link>
-                            <Link to={{ pathname: 'https://plus.google.com/+Shopsector' }}><img className='icon-social' src={instagram} alt='social media icon' /></Link>
+                            <Link to={{ pathname: 'https://www.facebook.com/ShopSector/' }} target='_blank'><img className='icon-social' src={facebook} alt='social media icon' /></Link>
+                            <Link to={{ pathname: 'https://www.pinterest.com/shopsector/' }} target='_blank'><img className='icon-social' src={pinterest} alt='social media icon' /></Link>
+                            <Link to={{ pathname: 'https://twitter.com/ShopSector' }} target='_blank'><img className='icon-social' src={twitter} alt='social media icon' /></Link>
+                            <Link to={{ pathname: 'https://www.instagram.com/shopsector.com_official/' }} target='_blank'><img className='icon-social' src={google} alt='social media icon' /></Link>
+                            <Link to={{ pathname: 'https://plus.google.com/+Shopsector' }} target='_blank'><img className='icon-social' src={instagram} alt='social media icon' /></Link>
                         </div>
                     </div>
                 </div>
 
                 <div className='footerBottomInfo'>
                     <div className='footerBottomLeft'>
-                        Обявените цени са в Български лева (BGN). Всички права запазени 2020 © 
+                        Обявените цени са в Български лева (BGN). Всички права запазени 2021 © 
                     </div>
 
                     <div className='footerBottomRight'>

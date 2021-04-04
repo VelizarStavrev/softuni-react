@@ -12,7 +12,9 @@ import returnProduct from './assets/icons/return-gray.svg';
 import arrowLeft from './assets/icons/arrow-black_left.svg';
 import arrowRight from './assets/icons/arrow-black_right.svg';
 
-const Products = () => {
+const Products = ({
+    match,
+}) => {
 
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
@@ -22,7 +24,7 @@ const Products = () => {
         const abortController = new AbortController();
         const signal = abortController.signal;
 
-        fetch(`http://localhost:4000/getAll`, { signal: signal })
+        fetch(`http://localhost:4000/getOneType/${match.params.type}/0`, { signal: signal })
             .then(res => res.json())
             .then(
                 (data) => {
@@ -38,7 +40,7 @@ const Products = () => {
         return function cleanup() {
             if (abortController) abortController.abort();
         }
-    }, [])
+    }, [match.params.type])
 
     if (error) {
         return <div>Error: {error.message}</div>;

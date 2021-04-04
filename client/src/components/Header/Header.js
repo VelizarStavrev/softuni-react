@@ -82,9 +82,9 @@ const Header = () => {
 
             <nav>
                 <NavLink to='/' className='navLink'>НАЧАЛО</NavLink>
-                <NavLink to='/products' className='navLink' activeClassName='navLinkActive'>МЪЖКИ</NavLink>
-                <NavLink to='/url' className='navLink'>ДАМСКИ</NavLink>
-                <NavLink to='/url' className='navLink'>ДЕТСКИ</NavLink>
+                <NavLink to='/products/male' className='navLink' activeClassName='navLinkActive'>МЪЖКИ</NavLink>
+                <NavLink to='/products/female' className='navLink'>ДАМСКИ</NavLink>
+                <NavLink to='/products/kid' className='navLink'>ДЕТСКИ</NavLink>
                 <NavLink to='/url' className='navLink navLinkSale'>РАЗПРОДАЖБА</NavLink>
             </nav>
         </header>

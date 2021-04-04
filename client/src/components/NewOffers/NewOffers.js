@@ -17,7 +17,7 @@ const NewOffers = (props) => {
         const abortController = new AbortController();
         const signal = abortController.signal;
 
-        fetch(`http://localhost:4000/getOneType/${props.type}`, { signal: signal })
+        fetch(`http://localhost:4000/getOneType/${props.type}/4`, { signal: signal })
             .then(res => res.json())
             .then(
                 (data) => {

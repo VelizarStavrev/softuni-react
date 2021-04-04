@@ -18,8 +18,8 @@ function App() {
 
       <Switch>
         <Route path='/' exact component={Home} />
-        <Route path='/products' exact component={Products} />
-        <Route path='/product' component={Product} />
+        <Route path='/products/:type' exact component={Products} />
+        <Route path='/product/:id' exact component={Product} />
 
         <Route path='/url' component={Main} /> {/* TEMP */}
       </Switch>
