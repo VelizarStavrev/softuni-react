@@ -33,6 +33,7 @@
 .productPageContainerTop {
     width: 1250px;
     display: flex;
+    margin-bottom: 50px;
 }
 
 /* IMAGE */
@@ -130,5 +131,27 @@
 /*  */
 /* BOTTOM CONTAINER */
 .productPageContainerBottom {
-    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 1250px;
+    display: flex;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding: 15px 0;
+
+}
+
+.productPageContainerBottom h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.productDesription {
+    width: 100%;
+    padding-right: 20px;
+    border-right: 1px solid lightgray;
+}
+
+.productFAQ {
+    width: 100%;
+    padding-left: 20px;
 }
