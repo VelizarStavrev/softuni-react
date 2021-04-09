@@ -38,10 +38,15 @@ const getOneType = (type, limit) => {
         case 'kid':
             word = 'Детски';
             break;
+
+        case 'sale':
+            word = '';
+            break;
     }
 
     return Product
         .find({ type: { "$regex": word, "$options": "i" } })
+        .sort({ price: 'asc' })
         .limit(limit*1)
         .lean()
         .then((products) => {

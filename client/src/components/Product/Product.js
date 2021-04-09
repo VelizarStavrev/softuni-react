@@ -4,6 +4,8 @@ import './Product.css';
 
 import { Link } from 'react-router-dom';
 
+import HeaderInfo from '../HeaderInfo/HeaderInfo';
+
 import view from './assets/icons/view-gray.svg';
 import check from './assets/icons/check-gray.svg';
 import delivery from './assets/icons/delivery-gray.svg';
@@ -59,27 +61,7 @@ const Product = ({
         return (
             <main>
                 <div className='productPageContainer'>
-                    <div className='productPageDeliveryContainer'>
-                        <div className='productPageItem'>
-                            <img src={view} alt='products info icon' />
-                            Тест и преглед преди плащане
-                        </div>
-    
-                        <div className='productPageItem'>
-                            <img src={check} alt='products info icon' />
-                            Всички стоки са налични
-                        </div>
-    
-                        <div className='productPageItem'>
-                            <img src={delivery} alt='products info icon' />
-                            Безплатна доставка над 100лв.
-                        </div>
-    
-                        <div className='productPageItem'>
-                            <img src={returnProduct} alt='products info icon' />
-                            30 дни безплатно връщане
-                        </div>
-                    </div>
+                    <HeaderInfo />
     
                     <div className='productPageContainerTop'>
                         <div className='productPageImageContainer'>

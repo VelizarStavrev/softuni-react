@@ -62,7 +62,7 @@ const Header = () => {
                 </form> 
 
                 <div className='userIcons'>
-                    <Link to='/url' className='iconHolder'>
+                    <Link to='/login' className='iconHolder'>
                         <img className='icon-bottom' src={profile} alt='top info icon' />
                         ВХОД
                     </Link>
@@ -83,9 +83,9 @@ const Header = () => {
             <nav>
                 <NavLink to='/' className='navLink'>НАЧАЛО</NavLink>
                 <NavLink to='/products/male' className='navLink' activeClassName='navLinkActive'>МЪЖКИ</NavLink>
-                <NavLink to='/products/female' className='navLink'>ДАМСКИ</NavLink>
-                <NavLink to='/products/kid' className='navLink'>ДЕТСКИ</NavLink>
-                <NavLink to='/url' className='navLink navLinkSale'>РАЗПРОДАЖБА</NavLink>
+                <NavLink to='/products/female' className='navLink' activeClassName='navLinkActive'>ДАМСКИ</NavLink>
+                <NavLink to='/products/kid' className='navLink' activeClassName='navLinkActive'>ДЕТСКИ</NavLink>
+                <NavLink to='/products/sale' className='navLink navLinkSale'>РАЗПРОДАЖБА</NavLink>
             </nav>
         </header>
     );

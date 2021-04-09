@@ -10,6 +10,8 @@ import Main from './components/Main/Main';
 import Home from './components/Home/Home';
 import Products from './components/Products/Products';
 import Product from './components/Product/Product';
+import Login from './components/Login/Login';
+import Register from './components/Register/Register';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Route path='/' exact component={Home} />
         <Route path='/products/:type' exact component={Products} />
         <Route path='/product/:id' exact component={Product} />
+        <Route path='/login' exact component={Login} />
+        <Route path='/register' exact component={Register} />
 
         <Route path='/url' component={Main} /> {/* TEMP */}
       </Switch>

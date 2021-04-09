@@ -67,7 +67,6 @@ router.get('/getAll', (req, res) => {
 
     productService.getAll()
         .then((products) => {
-            // console.log(products);
             res.send(products);
         })
         .catch(err => {

@@ -4,10 +4,7 @@ import './Products.css';
 
 import ProductCard from '../ProductCard/ProductCard';
 
-import view from './assets/icons/view-gray.svg';
-import check from './assets/icons/check-gray.svg';
-import delivery from './assets/icons/delivery-gray.svg';
-import returnProduct from './assets/icons/return-gray.svg';
+import HeaderInfo from '../HeaderInfo/HeaderInfo';
 
 import arrowLeft from './assets/icons/arrow-black_left.svg';
 import arrowRight from './assets/icons/arrow-black_right.svg';
@@ -50,27 +47,7 @@ const Products = ({
         return (
             <main>
                 <div className='productsContainer'>
-                    <div className='productsDeliveryContainer'>
-                        <div className='productsItem'>
-                            <img src={view} alt='products info icon' />
-                            Тест и преглед преди плащане
-                        </div>
-    
-                        <div className='productsItem'>
-                            <img src={check} alt='products info icon' />
-                            Всички стоки са налични
-                        </div>
-    
-                        <div className='productsItem'>
-                            <img src={delivery} alt='products info icon' />
-                            Безплатна доставка над 100лв.
-                        </div>
-    
-                        <div className='productsItem'>
-                            <img src={returnProduct} alt='products info icon' />
-                            30 дни безплатно връщане
-                        </div>
-                    </div>
+                    <HeaderInfo />
     
                     <div className='productsContainerSides'>
                         <div className='productsLeft'>

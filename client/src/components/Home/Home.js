@@ -59,7 +59,7 @@ const Home = () => {
                 <NewOffers name='Мъжки обувки' type='male' />
                 <NewOffers name='Дамски обувки' type='female' />
                 <NewOffers name='Детски обувки' type='kid' />
-                <NewOffers name='Разпродажба' type='male' />
+                <NewOffers name='Разпродажба' type='sale' />
                 <Brands />
                 <TestimonialsShowcase />
                 <LastNews />
