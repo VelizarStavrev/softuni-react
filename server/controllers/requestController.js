@@ -82,7 +82,6 @@ router.get('/getAll', (req, res) => {
 router.get('/getOne/:productId', (req, res) => {
     productService.getOne(req.params.productId)
         .then(product => {
-            // console.log(product);
             res.send(product);
         })
         .catch(err => {
@@ -102,7 +101,7 @@ router.get('/getOneType/:productType/:productLimit', (req, res) => {
         });
 });
 
-// Login and register
+// Users
 // 
 // Register
 router.post('/register', (req, res) => {
@@ -135,6 +134,19 @@ router.post('/login', (req, res) => {
         .catch(err => {
             console.log(err);
             res.json({ error: { message: 'An error occured!' } });
+        });
+});
+
+// Get one
+router.get('/getOneUser/:userId', (req, res) => {
+    authServices.getOneUser(req.params.userId)
+        .then(user => {
+            console.log(user);
+            res.send(user);
+        })
+        .catch(err => {
+            console.log(err);
+            res.send('An error occured!');
         });
 });
 

@@ -21,7 +21,17 @@ const login = async (email, password) => {
     return [token, user._id];
 };
 
+const getOneUser = (id) => {
+    return User
+        .findById(id)
+        .then(user => {
+            console.log(user);
+            return user;
+        });
+}
+
 module.exports = {
     register,
     login,
+    getOneUser
 }
