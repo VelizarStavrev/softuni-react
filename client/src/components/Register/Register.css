@@ -1,17 +1,17 @@
-.profileContainer {
+.profileRegisterContainer {
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
 }
 
-.profileLoginForm {
+.profileRegisterForm {
     margin: 40px;
     border: 1px solid lightgray;
     border-radius: 2.5px;
 }
 
-.profileLoginForm h2 {
+.profileRegisterForm h2 {
     text-transform: uppercase;
     border-bottom: 1px solid lightgray;
     padding: 20px;
@@ -19,37 +19,37 @@
     text-align: center;
 }
 
-.profileLoginContainer {
+.registerFormDiv {
+    width: 100%;
+}
+
+.profileRegisterFormContainer {
     display: flex;
     padding: 20px;
 }
 
-.profileLoginContainer h3 {
-    text-align: center;
+.profileRegisterFormContainer h3 {
+    text-align: left;
     margin-top: 0;
 }
 
-/* Login */
-.profileLoginSide {
-    margin-right: 40px;
-}
-
-.profileLoginSide form {
+.profileRegisterFormContainer form {
     margin-bottom: 15px;
+    width: 100%;
 }
 
-.profileLoginSide label {
+.profileRegisterFormContainer label {
     margin-bottom: 15px;
     display: inline-block;
     width: 100%;
 }
 
-.profileLoginSide form.input {
+.profileRegisterFormContainer label input {
     width: 100%;
     box-sizing: border-box;
 }
 
-.profileLoginSideInputBtn {
+.profileRegisterFormContainerInputBtn {
     border: none;
     background-color: #000;
     color: #fff;
@@ -57,15 +57,20 @@
     font-weight: bold;
     width: 125px;
     border-radius: 2.5px;
+    cursor: pointer;
 }
 
-.profileLoginSide a {
+.profileRegisterFormContainerInputBtn:hover {
+    background-color: #6d6e71;
+}
+
+.profileRegisterFormContainer a {
     display: inline-block;
     margin-top: 5px;
     color: #6d6e71;
 }
 
-.profileLoginSide a:hover {
+.profileRegisterFormContainer a:hover {
     color: #000;
 }
 

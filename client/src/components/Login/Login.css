@@ -44,7 +44,7 @@
     width: 100%;
 }
 
-.profileLoginSide form.input {
+.profileLoginSide label input {
     width: 100%;
     box-sizing: border-box;
 }

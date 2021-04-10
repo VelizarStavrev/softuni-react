@@ -10,20 +10,37 @@ import checkGreen from './assets/icons/check-green.svg';
 
 const Login = () => {
 
-    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     function onSubmitHandler(e) {
         e.preventDefault();
         
         let data = {
-            name,
+            email,
             password
         }
 
-        // TO DO
-        console.log('Login form data:', data);
         // SEND TO BACKEND
+        fetch(`http://localhost:4000/login`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+
+            if (data.message === 'OK') {
+                localStorage.setItem('user-token', data.token);
+                localStorage.setItem('user-id', data.userid);
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
     }
 
     return (
@@ -41,8 +58,8 @@ const Login = () => {
                                 <input 
                                     type="text" 
                                     name="name" 
-                                    value={name}
-                                    onChange={e => setName(e.target.value)}
+                                    value={email}
+                                    onChange={e => setEmail(e.target.value)}
                                 />
                             </label><br />
                             <label>
