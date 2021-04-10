@@ -2,10 +2,11 @@ const router = require('express').Router();
 
 const productService = require('../services/productService');
 
-// const authServices = require('../services/authService');
+const authServices = require('../services/authService');
 // const { COOKIE_NAME } = require('../config/config');
 
 // Home
+// 
 router.get('/', (req, res) => {
     res.send('Default request received!');
 });
@@ -22,6 +23,8 @@ router.get('/test', (req, res) => {
     res.send(test);
 });
 
+// 
+// Products
 // Create new item
 router.post('/create', (req, res) => {
     // let productData = {
@@ -91,7 +94,6 @@ router.get('/getOne/:productId', (req, res) => {
 router.get('/getOneType/:productType/:productLimit', (req, res) => {
     productService.getOneType(req.params.productType, req.params.productLimit)
         .then(product => {
-            // console.log(product);
             res.send(product);
         })
         .catch(err => {
@@ -100,10 +102,43 @@ router.get('/getOneType/:productType/:productLimit', (req, res) => {
         });
 });
 
-// TO DO
+// Login and register
+// 
 // Register
+router.post('/register', (req, res) => {
+    
+    const { email, password, name, phone } = req.body;
+
+    authServices.register(email, password, name, phone)
+        .then(() => {
+            console.log('User registered!');
+            res.json({ ok: { message: 'User registered!' }});
+        })
+        .catch(err => {
+            console.log(err);
+            res.json({ error: { message: 'An error occured!' } });
+        });
+});
+
 // Login
-// Products with filters
+router.post('/login', (req, res) => {
+    const { email, password } = req.body;
+
+    authServices.login(email, password)
+        .then(array => {
+            res.status(200).json({
+                token: array[0],
+                userid: array[1],
+                message: 'OK'
+            });
+        })
+        .catch(err => {
+            console.log(err);
+            res.json({ error: { message: 'An error occured!' } });
+        });
+});
+
+// TO DO
 // Route that does not exist response
 
 module.exports = router;
