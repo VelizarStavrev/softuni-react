@@ -25,7 +25,6 @@ const getOneUser = (id) => {
     return User
         .findById(id)
         .then(user => {
-            console.log(user);
             return user;
         });
 }
