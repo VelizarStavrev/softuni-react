@@ -24,7 +24,6 @@ function App() {
 
   function onChangeLogHandlerFunc() {
     this.useState(oldState => ({ currentState: oldState.currentState === true ? false : true }));
-    console.log('kek');
   }
 
   const checkIfLogged = localStorage.getItem('user-token') ? true : false;
