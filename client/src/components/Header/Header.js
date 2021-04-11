@@ -1,5 +1,8 @@
 import './Header.css';
 
+import { useContext } from 'react';
+import isLogged from '../../contexts/isLoggedContext';
+
 import { Link, NavLink } from 'react-router-dom';
 
 import logo from './assets/logo.svg';
@@ -15,6 +18,9 @@ import favorites from './assets/icons/user/star-black_empty.svg';
 import cart from './assets/icons/user/cart-black.svg';
 
 const Header = () => {
+
+    const { logged } = useContext(isLogged);
+
     return (
         <header>
             <div className='topInfo'>
@@ -62,19 +68,19 @@ const Header = () => {
                 </form> 
 
                 <div className='userIcons'>
-                    <Link to='/login' className='iconHolder'>
+                    <Link to={logged ? '/profile' : '/login'} className='iconHolder'>
                         <img className='icon-bottom' src={profile} alt='top info icon' />
-                        ВХОД
+                        {logged ? 'ПРОФИЛ' : 'ВХОД'}
                     </Link>
-                    <Link to='/url' className='iconHolder'>
+                    <Link to='/favorites' className='iconHolder'>
                         <img className='icon-bottom' src={favorites} alt='top info icon' />
                         ЛЮБИМИ
                     </Link>
-                    <Link to='/url' className='iconHolder'>
+                    <Link to='/cart' className='iconHolder'>
                         <img className='icon-bottom' src={cart} alt='top info icon' />
                         КОЛИЧКА
                     </Link>
-                    <Link to='/url' className='iconHolder'>
+                    <Link to='/cart' className='iconHolder'>
                         0 бр. / 0.00 лв
                     </Link>
                 </div>

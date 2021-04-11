@@ -1,8 +1,9 @@
 import './Login.css';
 
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import isLogged from '../../contexts/isLoggedContext';
 
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import HeaderInfo from '../HeaderInfo/HeaderInfo';
 
@@ -12,6 +13,10 @@ const Login = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    const { onChangeLogHandler } = useContext(isLogged);
+
+    const history = useHistory();
 
     function onSubmitHandler(e) {
         e.preventDefault();
@@ -31,11 +36,13 @@ const Login = () => {
         })
         .then(response => response.json())
         .then(data => {
-            console.log('Success:', data);
-
+            // console.log('Success:', data);
+            
             if (data.message === 'OK') {
                 localStorage.setItem('user-token', data.token);
                 localStorage.setItem('user-id', data.userid);
+                history.push('/profile');
+                setTimeout(() => { onChangeLogHandler.bind(this); }, 2000);
             }
         })
         .catch((error) => {

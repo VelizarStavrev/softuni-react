@@ -26,10 +26,23 @@ const Product = ({
         setImgSrc(e.target.src);
     }
 
+    function addToCart() {
+        let cartCheck = JSON.parse(localStorage.getItem('cart-items'));
+
+        if (cartCheck == null) {
+            localStorage.setItem('cart-items', JSON.stringify([{id: match.params.id, size, price: items.price, discount: items.discount}]));
+            return;
+        } 
+
+        cartCheck.push({id: match.params.id, size, price: items.price, discount: items.discount});
+        localStorage.setItem('cart-items',JSON.stringify(cartCheck))
+    }
+
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState([]);
     const [imgSrc, setImgSrc] = useState('');
+    const [size, setSize] = useState('0');
 
     useEffect(() => {
         const abortController = new AbortController();
@@ -91,14 +104,14 @@ const Product = ({
                             <p>Спестявате {items.price ? (items.price.toFixed(2) - (items.price - (items.price * (items.discount / 100)))).toFixed(2) : ''} лв.</p>
                             <p>Налични цветове: {items.color}</p>
     
-                            <select name="sortBy" id="sortBy" defaultValue="0">
+                            <select name="sortBy" id="sortBy" defaultValue={size} onChange={e => setSize(e.target.value)}>
                                 <option value="0">Избери размер</option>
                                 {items.sizes ? items.sizes.map(x => {
                                     return <option key={x} value={x}>{x}</option>;
                                 }) : ''}
                             </select>
     
-                            <button>ДОБАВИ В КОЛИЧКАТА</button>
+                            <button onClick={addToCart}>ДОБАВИ В КОЛИЧКАТА</button>
     
                             <p>Поръчай сега и ще получиш в Чет. 01.04</p>
     
@@ -142,9 +155,9 @@ const Product = ({
                             </div>
                         </div>
     
-                        <div className='productPageOrderContainer'>
+                        {/* <div className='productPageOrderContainer'>
                             QUICK ORDER FORM
-                        </div>
+                        </div> */}
                     </div>
     
                     <div className='productPageContainerBottom'>

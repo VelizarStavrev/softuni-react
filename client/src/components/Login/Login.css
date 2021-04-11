@@ -57,6 +57,7 @@
     font-weight: bold;
     width: 100px;
     border-radius: 2.5px;
+    cursor: pointer;
 }
 
 .profileLoginSide a {
