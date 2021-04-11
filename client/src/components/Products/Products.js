@@ -91,7 +91,7 @@ const Products = ({
     
                         <div className='productsRight'>
                             <div className='productsHeader'>
-                                <h2>НАЧАЛО / МЪЖКИ МАРАТОНКИ, КЕЦОВЕ И ДРУГИ</h2>
+                                <h2>НАЧАЛО / {match.params.type === 'male' ? 'МЪЖКИ' : (match.params.type === 'female' ? 'ДАМСКИ' : 'ДЕТСКИ')} МАРАТОНКИ, КЕЦОВЕ И ДРУГИ</h2>
                                 <div>
                                     Подреди по:
                                     <select name="sortBy" id="sortBy">
