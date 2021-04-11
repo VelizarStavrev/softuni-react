@@ -10,9 +10,27 @@ const Cart = () => {
 
     function makeOrder() {
         const userid = localStorage.getItem('user-id');
-        console.log(userid, cartItems);
-        // TO DO
+        const total = cartItems ? cartItems.reduce((a, b) => a += (b.price - b.price * (b.discount / 100)), 0 ).toFixed(2) : 0;
+        
+        let data = {userid, products: cartItems, total}
+        console.log(data);
+
         // SEND TO BACKEND
+        fetch(`http://localhost:4000/createOrder`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+            localStorage.removeItem('cart-items');
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
     }
 
     return (
@@ -29,7 +47,7 @@ const Cart = () => {
                 }) : <p>Нямате добавени продукти в кошницата</p>}
 
                 <div>
-                    <span>TOTAL: {cartItems.reduce((a, b) => a += (b.price - b.price * (b.discount / 100)), 0 ).toFixed(2)}</span>
+                    <span>TOTAL: {cartItems ? cartItems.reduce((a, b) => a += (b.price - b.price * (b.discount / 100)), 0 ).toFixed(2) : 0}</span>
                     <button onClick={makeOrder}>ORDER</button>
                 </div>
             </div>

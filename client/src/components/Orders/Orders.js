@@ -6,7 +6,7 @@ import { Link, NavLink } from 'react-router-dom';
 
 import HeaderInfo from '../HeaderInfo/HeaderInfo';
 
-const Profile = () => {
+const Orders = () => {
 
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
@@ -16,7 +16,7 @@ const Profile = () => {
         const abortController = new AbortController();
         const signal = abortController.signal;
 
-        fetch(`http://localhost:4000/getOneUser/${localStorage.getItem('user-id')}`, { signal: signal })
+        fetch(`http://localhost:4000/getOrders/${localStorage.getItem('user-id')}`, { signal: signal })
             .then(res => res.json())
             .then(
                 (data) => {
@@ -49,13 +49,15 @@ const Profile = () => {
                         <NavLink to='/orders' activeClassName='profileActiveLink'>ПОРЪЧКИ</NavLink>
                     </div>
 
-                    <p>№8808802492 - 19.11.2018 - Admin Adminov - Sent - 169.99 BGN</p>
-                    <p>№8808802492 - 19.11.2018 - Admin Adminov - Sent - 169.99 BGN</p>
-                    <p>№8808802492 - 19.11.2018 - Admin Adminov - Sent - 169.99 BGN</p>
+                    {items ? items.map(x => {
+                        return <p key={x._id}>
+                            №{x._id} - {x.products.map(y => <Link to={'/product/' + y.id} key={y.id}><img id='productPageImageContainerMainImg' src={process.env.PUBLIC_URL + `/products/${y.id}/1.jpg`} alt='product visual' /></Link>)} - Тотал: {x.total}лв.
+                        </p>;
+                    }) : <p>Нямате направени поръчки</p>}
                 </div>
             </div>
         );
     }
 };
 
-export default Profile;
+export default Orders;

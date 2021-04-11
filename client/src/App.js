@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import { Route, Switch, Redirect } from 'react-router-dom';
 
@@ -53,6 +53,7 @@ function App() {
           </Route>
           <Route path='/cart' component={Cart} /> {/* TEMP */}
 
+          <Route path='/' component={Home} />
           <Route path='/url' component={Main} /> {/* TEMP */}
         </Switch>
 

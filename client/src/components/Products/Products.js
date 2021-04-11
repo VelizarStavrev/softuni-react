@@ -117,11 +117,11 @@ const Products = ({
                                 <div className='productsNavigation'>
                                     <img src={arrowLeft} alt='arrow left' />
                                     <button>1</button>
-                                    <button>2</button>
+                                    {/* <button>2</button>
                                     <button>3</button>
                                     <button>4</button>
                                     <button>5</button>
-                                    <button>6</button>
+                                    <button>6</button> */}
                                     <img src={arrowRight} alt='arrow right' />
                                 </div>
                             </div>

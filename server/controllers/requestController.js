@@ -2,8 +2,9 @@ const router = require('express').Router();
 
 const productService = require('../services/productService');
 
+const orderService = require('../services/orderService');
+
 const authServices = require('../services/authService');
-// const { COOKIE_NAME } = require('../config/config');
 
 // Home
 // 
@@ -150,7 +151,38 @@ router.get('/getOneUser/:userId', (req, res) => {
         });
 });
 
-// TO DO
-// Route that does not exist response
+// Orders
+// 
+// Create new order
+router.get('/getOrders/:id', (req, res) => {
+    
+    // res.send('received')
+    orderService.getOrders(req.params.id)
+        .then(orders => {
+            res.send(orders);
+        })
+        .catch(err => {
+            console.log(err);
+            res.send('An error occured!');
+        });
+});
+
+router.post('/createOrder', (req, res) => {
+    
+    let orderData = req.body;
+
+    orderService.create(orderData)
+        .then((order) => {
+            console.log('Order created!');
+            console.log(order);
+            res.send(order);
+        })
+        .catch(err => {
+            console.log(err);
+            res.send('An error occured!');
+        });
+});
+
+
 
 module.exports = router;
