@@ -10,7 +10,7 @@ import isLogged from './contexts/isLoggedContext';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
-import Main from './components/Main/Main';
+import Main from './components/Main/Main'; /* temp - used for testing */
 import Home from './components/Home/Home';
 import Products from './components/Products/Products';
 import Product from './components/Product/Product';
@@ -50,7 +50,7 @@ function App() {
           <Route path='/orders'>
             {!localStorage.getItem('user-token') ? <Redirect to='/login' /> : <Orders />}
           </Route>
-          <Route path='/cart' component={Cart} /> {/* TEMP */}
+          <Route path='/cart' component={Cart} />
 
           <Route path='/' component={Home} />
           <Route path='/url' component={Main} /> {/* TEMP */}
