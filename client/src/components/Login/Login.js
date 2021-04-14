@@ -14,13 +14,13 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const { onChangeLogHandler } = useContext(isLogged);
+    const { setLogged } = useContext(isLogged);
 
     const history = useHistory();
 
     function onSubmitHandler(e) {
         e.preventDefault();
-        
+
         let data = {
             email,
             password
@@ -34,20 +34,24 @@ const Login = () => {
             },
             body: JSON.stringify(data),
         })
-        .then(response => response.json())
-        .then(data => {
-            // console.log('Success:', data);
-            
-            if (data.message === 'OK') {
-                localStorage.setItem('user-token', data.token);
-                localStorage.setItem('user-id', data.userid);
+            .then(response => response.json())
+            .then(data => {
+                // console.log('Success:', data);
+
+                if (data.message === 'OK') {
+                    localStorage.setItem('user-id', data.userid);
+                    localStorage.setItem('user-token', data.token);
+                    setLogged(true);
+                }
+            })
+            .then(() => {
+                // setTimeout(() => { onChangeLogHandler.bind(this); }, 2000);
                 history.push('/profile');
-                setTimeout(() => { onChangeLogHandler.bind(this); }, 2000);
-            }
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-        });
+                return null;
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
     }
 
     return (
@@ -62,20 +66,22 @@ const Login = () => {
                         <form onSubmit={onSubmitHandler}>
                             <label>
                                 Имейл<br />
-                                <input 
-                                    type="text" 
-                                    name="name" 
+                                <input
+                                    type="text"
+                                    name="name"
                                     value={email}
                                     onChange={e => setEmail(e.target.value)}
+                                    required
                                 />
                             </label><br />
                             <label>
                                 Парола<br />
-                                <input 
-                                    type="password" 
-                                    name="password" 
+                                <input
+                                    type="password"
+                                    name="password"
                                     value={password}
                                     onChange={e => setPassword(e.target.value)}
+                                    required
                                 />
                             </label><br />
                             <input type="submit" value="ВХОД" className='profileLoginSideInputBtn' /><br />

@@ -19,7 +19,7 @@ const Profile = () => {
     const [isLoaded, setIsLoaded] = useState(false);
     // const [items, setItems] = useState([]);
 
-    const { onChangeLogHandler } = useContext(isLogged);
+    const { setLogged } = useContext(isLogged);
 
     useEffect(() => {
         const abortController = new AbortController();
@@ -60,7 +60,7 @@ const Profile = () => {
 
     function logoutHandler() {
         localStorage.clear();
-        onChangeLogHandler.bind(this);
+        setLogged(false);
     }
 
     if (error) {

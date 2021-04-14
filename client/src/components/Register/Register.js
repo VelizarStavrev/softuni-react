@@ -2,7 +2,7 @@ import './Register.css';
 
 import { useState } from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import HeaderInfo from '../HeaderInfo/HeaderInfo';
 
@@ -16,6 +16,7 @@ const Register = () => {
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
 
+    const history = useHistory();
 
     function onSubmitHandler(e) {
         e.preventDefault();
@@ -48,6 +49,8 @@ const Register = () => {
         .then(response => response.json())
         .then(data => {
             console.log('Success:', data);
+            history.push('/login');
+            return null;
         })
         .catch((error) => {
             console.error('Error:', error);

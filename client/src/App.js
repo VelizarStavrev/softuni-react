@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Route, Switch, Redirect } from 'react-router-dom';
 
@@ -22,20 +22,14 @@ import Cart from './components/Cart/Cart';
 
 function App() {
 
-  function onChangeLogHandlerFunc() {
-    this.useState(oldState => ({ currentState: oldState.currentState === true ? false : true }));
-  }
-
   const checkIfLogged = localStorage.getItem('user-token') ? true : false;
 
-  const contextValue = {
-    logged: checkIfLogged,
-    onChangeLogHandler: onChangeLogHandlerFunc
-  }
+  const [logged, setLogged] = useState(checkIfLogged);
+  const value = { logged, setLogged };
 
   return (
     <div className="App">
-      <isLogged.Provider value={contextValue}>
+      <isLogged.Provider value={value}>
         <Header />
 
         <Switch>
