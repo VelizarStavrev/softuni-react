@@ -104,3 +104,7 @@
     align-self: center;
     border-radius: 2.5px;
 }
+
+.errorMessage {
+    color: red;
+}

@@ -1,6 +1,6 @@
 import './Login.css';
 
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import isLogged from '../../contexts/isLoggedContext';
 
 import { Link, useHistory } from 'react-router-dom';
@@ -45,7 +45,6 @@ const Login = () => {
                 }
             })
             .then(() => {
-                // setTimeout(() => { onChangeLogHandler.bind(this); }, 2000);
                 history.push('/profile');
                 return null;
             })
@@ -84,6 +83,7 @@ const Login = () => {
                                     required
                                 />
                             </label><br />
+                            <label className='errorMessage'>Temp</label>
                             <input type="submit" value="ВХОД" className='profileLoginSideInputBtn' /><br />
                             <Link to='/url'>Забравена парола</Link>
                         </form>
