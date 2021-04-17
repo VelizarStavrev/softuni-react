@@ -35,7 +35,7 @@
     color: #6d6e71;
     height: 55px;
     overflow: hidden;
-    width: 500px;
+    width: auto;
 }
 
 .cartInfoContainer a:hover {
@@ -57,4 +57,23 @@
 
 .cartInfoContainer button:hover {
     background-color: #6d6e71;
+}
+
+.cartProductContainer {
+    display: flex;
+}
+
+.cartRemoveItem {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: red;
+    opacity: 0.5;
+}
+
+.cartRemoveItem:hover {
+    opacity: 1;
 }

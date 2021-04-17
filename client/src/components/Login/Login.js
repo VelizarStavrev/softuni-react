@@ -1,6 +1,6 @@
 import './Login.css';
 
-import { useState, useContext, useEffect } from 'react';
+import { useState, useContext } from 'react';
 import isLogged from '../../contexts/isLoggedContext';
 
 import { Link, useHistory } from 'react-router-dom';

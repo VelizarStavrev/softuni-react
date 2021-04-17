@@ -17,6 +17,30 @@ const Products = ({
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState([]);
 
+    let sectionName;
+
+    switch (match.params.type) {
+        case 'male':
+            sectionName = 'МЪЖКИ';
+            break;
+        
+        case 'female':
+            sectionName = 'ДАМСКИ';
+            break;
+            
+        case 'kid':
+            sectionName = 'ДЕТСКИ';
+            break;
+
+        case 'sale':
+            sectionName = 'РАЗПРОДАЖБА НА';
+            break;
+
+        default:
+            sectionName = '';
+            break;
+    }
+
     useEffect(() => {
         const abortController = new AbortController();
         const signal = abortController.signal;
@@ -91,7 +115,7 @@ const Products = ({
     
                         <div className='productsRight'>
                             <div className='productsHeader'>
-                                <h2>НАЧАЛО / {match.params.type === 'male' ? 'МЪЖКИ' : (match.params.type === 'female' ? 'ДАМСКИ' : 'ДЕТСКИ')} МАРАТОНКИ, КЕЦОВЕ И ДРУГИ</h2>
+                                <h2>НАЧАЛО / {sectionName} МАРАТОНКИ, КЕЦОВЕ И ДРУГИ</h2>
                                 <div>
                                     Подреди по:
                                     <select name="sortBy" id="sortBy">

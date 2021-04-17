@@ -2,6 +2,7 @@ import './Header.css';
 
 import { useContext } from 'react';
 import isLogged from '../../contexts/isLoggedContext';
+import cartContext from '../../contexts/cartContext';
 
 import { Link, NavLink } from 'react-router-dom';
 
@@ -15,11 +16,13 @@ import phone from './assets/icons/top-info/phone-gray.svg';
 import search from './assets/icons/user/search-black.svg';
 import profile from './assets/icons/user/user-black.svg';
 import favorites from './assets/icons/user/star-black_empty.svg';
-import cart from './assets/icons/user/cart-black.svg';
+import cartIcon from './assets/icons/user/cart-black.svg';
 
 const Header = () => {
 
     const { logged } = useContext(isLogged);
+
+    const { cart } = useContext(cartContext);
 
     return (
         <header>
@@ -77,11 +80,11 @@ const Header = () => {
                         ЛЮБИМИ
                     </Link>
                     <Link to='/cart' className='iconHolder'>
-                        <img className='icon-bottom' src={cart} alt='top info icon' />
+                        <img className='icon-bottom' src={cartIcon} alt='top info icon' />
                         КОЛИЧКА
                     </Link>
                     <Link to='/cart' className='iconHolder'>
-                        0 бр. / 0.00 лв
+                        {cart ? cart.length : 0} бр. / {cart ? cart.reduce((a, b) => a += (b.price - b.price * (b.discount / 100)), 0 ).toFixed(2) : (0).toFixed(2)}лв.
                     </Link>
                 </div>
             </div>

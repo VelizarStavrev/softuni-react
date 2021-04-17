@@ -1,8 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 
 import './Product.css';
 
 import { Link } from 'react-router-dom';
+
+import cartContext from '../../contexts/cartContext';
 
 import HeaderInfo from '../HeaderInfo/HeaderInfo';
 
@@ -31,11 +33,13 @@ const Product = ({
 
         if (cartCheck == null) {
             localStorage.setItem('cart-items', JSON.stringify([{id: match.params.id, size, price: items.price, discount: items.discount}]));
+            setCart([{id: match.params.id, size, price: items.price, discount: items.discount}]);
             return;
         } 
 
         cartCheck.push({id: match.params.id, size, price: items.price, discount: items.discount});
-        localStorage.setItem('cart-items',JSON.stringify(cartCheck))
+        localStorage.setItem('cart-items', JSON.stringify(cartCheck));
+        setCart(cartCheck);
     }
 
     const [error, setError] = useState(null);
@@ -43,6 +47,8 @@ const Product = ({
     const [items, setItems] = useState([]);
     const [imgSrc, setImgSrc] = useState('');
     const [size, setSize] = useState('0');
+
+    const { setCart } = useContext(cartContext);
 
     useEffect(() => {
         const abortController = new AbortController();
